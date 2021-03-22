@@ -1,1 +1,3 @@
-반갑다 세상아, Hello world!
+사실은 안 반갑다 세상아,
+
+Go away, world!
