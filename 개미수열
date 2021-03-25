@@ -1,0 +1,38 @@
+string start = "1"; //첫번째 수열 입력
+            
+            //계산 시작
+            for (int i = 0; i < 5; i++)
+            {
+                //출력
+                Console.WriteLine((i + 1) + "번째 : " + start);
+
+                //읽고 말하기 수열 계산
+                string end = "";
+
+                //말하기 수열 연속자리 비교를 위한 변수
+                char number = start[0]; //반복 시 number은 1로 초기화됨
+
+                //각각의 숫자를 세기 위하여
+                int count = 0;
+
+                for (int j = 0; j < start.Length; j++)
+                {
+                 //연속 숫자가 다르면 end에 문자열을 붙이고
+                 //num에 다른 숫자를 대입
+                 //횟수는 여기서부터 시작이므로 1로 초기화
+                    if (number != start[j])
+                    {
+                        end = end + number + count;
+                        number = start[j];
+                        count = 1;
+                    }
+                    else
+                    { //연속 숫자의 갯수를 센다.
+                        count++;
+                    }
+                }
+                end = end + number + count;
+
+                //다음 단계 준비
+                start = end;
+            }
