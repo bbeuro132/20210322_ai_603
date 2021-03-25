@@ -24,7 +24,7 @@ string start = "1"; //첫번째 수열 입력
                     {
                         end = end + number + count;
                         number = start[j];
-                        count = 1;
+                        count = 1; //이미 2 이상의 수가 하나 생겼기 때문에 1로 초기화해줘야 한다
                     }
                     else
                     { //연속 숫자의 갯수를 센다.
